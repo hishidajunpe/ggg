@@ -1,0 +1,652 @@
+2023-05-04 11:43:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 11:43:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 11:46:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 11:46:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 11:46:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 11:46:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 12:14:32 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "USER_ID" が見つかりません
+Column "USER_ID" not found; SQL statement:
+ALTER TABLE USERS
+ALTER COLUMN USER_ID USERS_ID [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:765)
+	at org.h2.command.Parser.columnIfTableExists(Parser.java:8919)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:8505)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8491)
+	at org.h2.command.Parser.parseAlter(Parser.java:7548)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-05-04 12:14:50 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "USERS_ID"
+Unknown data type: "USERS_ID"; SQL statement:
+ALTER TABLE KAKEIBO
+ALTER COLUMN USER_ID USERS_ID [50004-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6249)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6087)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6069)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5948)
+	at org.h2.command.Parser.parseAlterTableAlterColumnType(Parser.java:8932)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:8575)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8491)
+	at org.h2.command.Parser.parseAlter(Parser.java:7548)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-05-04 12:16:12 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "KAKEIBO" が見つかりません
+Column "KAKEIBO" not found; SQL statement:
+ALTER TABLE KAKEIBO
+DROP COLUMN KAKEIBO [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:765)
+	at org.h2.command.Parser.parseAlterTableDrop(Parser.java:8712)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8489)
+	at org.h2.command.Parser.parseAlter(Parser.java:7548)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-05-04 12:19:38 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "NAME" が見つかりません
+Column "NAME" not found; SQL statement:
+INSERT INTO USERS (ID, NAME, PASSWORD) VALUES (1, '山田', 'password') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-05-04 22:40:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:40:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:42:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:42:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:50:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:50:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:50:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:50:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:53:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:53:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:56:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:56:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:57:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:57:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:59:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:59:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 22:59:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 22:59:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:02:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:02:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:08:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:08:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:20:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:20:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:23:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:23:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:24:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:24:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:39:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:39:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:45:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:45:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:47:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:47:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:48:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:48:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-04 23:53:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-04 23:53:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-05 00:12:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-05 00:12:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-05 00:15:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-05 00:15:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-05 00:26:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-05 00:26:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table kakeibo add constraint FKby5nkje283yf0mf8nttv9e1fr foreign key (user_id) references user [42001-214]
+2023-05-07 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 19:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 19:20:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 19:20:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 19:20:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 19:25:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 19:25:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 19:25:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 19:31:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 19:31:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 19:31:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 19:34:55 database: wrong user or password; user: "ADMIN"
+org.h2.message.DbException: ユーザ名またはパスワードが不正です
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: ユーザ名またはパスワードが不正です
+Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 56 more
+2023-05-07 21:41:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 21:41:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 21:41:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 21:41:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 21:41:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 21:41:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 21:43:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 21:43:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 21:43:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
+2023-05-07 21:47:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table [*]user (id integer not null, password varchar(255), name varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id integer not null, password varchar(255), name varchar(255), primary key (id)) [42001-214]
+2023-05-07 21:47:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table income add constraint FK8qxqvv9oy66uuotjtfvqu1fxy foreign key (user_id) references user [42001-214]
+2023-05-07 21:47:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table spending add constraint FK9cvsp525cqk8fgqqjon1bx1v4 foreign key (user_id) references user [42001-214]
