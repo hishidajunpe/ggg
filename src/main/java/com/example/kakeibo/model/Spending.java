@@ -28,14 +28,14 @@ public class Spending {
 	private Integer spendingAmount;
 	
 	//収支の日付
-	LocalDate datetime;
+	private LocalDate datetime;
 	
 	//メモ内容
 	@NotBlank(message="適切な内容を入力してください。")
 	@Column(length=18)
-	String memo;
+	private String memo;
 	
 	//外部キーuser
 	@ManyToOne
-	 User user_id;
+	private User user;
 }
