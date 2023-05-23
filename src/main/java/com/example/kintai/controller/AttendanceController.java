@@ -48,7 +48,7 @@ public class AttendanceController {
 		if (bindingResult.hasErrors()) {
 			return "register";
 		}
-		attendanceService.createAttendace(attendance);
+		attendanceService.createAttendance(attendance);
 		return "index2";
 	}
 	
@@ -82,7 +82,7 @@ public class AttendanceController {
 			if (bindingResult.hasErrors()) {
 				return "/edit";
 			}
-			attendanceService.updateAttendace(attendance);
+			attendanceService.updateAttendance(attendance);
 			return "redirect:/save";
 		}
 
