@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/common}">
+<head>
+<meta charset="UTF-8">
+<title>保存一覧</title>
+</head>
+<body>
+<div layout:fragment="contents">
+<h3 style="padding:40px">勤怠保存時間</h3>
+<div class="row mb-3">
+	<div class="col">
+		<h2 th:text="${mm}"></h2>月分
+		<p>確認したい月を選択してください</p>
+		<form th:action="@{/save}" class="form-inline" method="post"> 
+			<label class="mr-3"> 月を選択してください
+				<select name="mm"class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+				</select>
+			</label><input type="submit" value="申請" class="btn btn-secondary mr-1">
+		</form>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>月</th>
+					<th>日</th>
+					<th>出勤時間</th>
+					<th>退勤時間</th>
+					<th>休憩開始時間</th>
+					<th>休憩終了時間</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="attendance : ${tableAttendance}" th:object="${attendance}" >
+					<td th:text="*{mm}"></td>
+					<td th:text="*{dd}"></td>
+					<td th:text="*{workstarttime}"></td>
+					<td th:text="*{workendtime}"></td>
+					<td th:text="*{breakstarttime}"></td>
+					<td th:text="*{breakendtime}"></td>
+					<td><a th:href="@{|/edit/*{id}|}">変更</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>		
+</div>
+
+</div>
+</body>
+</html>

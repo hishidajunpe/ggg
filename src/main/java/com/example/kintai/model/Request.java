@@ -28,7 +28,7 @@ public class Request {
 	private LocalDate requesttime;
 	
 	//主キーrequest
-	@OneToMany(mappedBy="Request")
+	@OneToMany(mappedBy="request")
 	private List<Attendance> attendance;
 	
 	

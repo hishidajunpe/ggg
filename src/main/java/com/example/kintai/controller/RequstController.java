@@ -21,7 +21,7 @@ public class RequstController {
 	private RequestService requestService;
 	
 	//勤怠保存したものを申請する
-	@PostMapping("/save")
+	@PostMapping("/save-request")
 	public String createRequest(Request request) {
 		requestService.createRequest(request);
 		return "index3";

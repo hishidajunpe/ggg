@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/common}">
+<head>
+<meta charset="UTF-8">
+<title>勤怠管理アプリ</title>
+</head>
+<body>
+<div layout:fragment="contents">
+
+	<div style= "text-align:center">
+		<h2>勤怠登録<br>（現在の日付）</h2>
+		<h2 th:text="${#temporals.format(date, 'M/dd')}"></h2>
+		<h3 class="text-danger">※申請完了しました</h3><br>
+		<p>勤怠登録の場合は勤怠登録を押してください</p>
+		<p>変更がある場合は「保存一覧」を選択し編集してください。</p>
+		<p>申請一覧を確認する場合は「申請済一覧」を選択してください。</p><br><br>
+		<a th:href="@{|/register|}"><button type="button" class="btn btn-info">勤怠登録</button></a><br>
+	</div>
+
+</div>
+</body>
+</html>
