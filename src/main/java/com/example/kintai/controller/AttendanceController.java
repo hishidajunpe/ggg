@@ -1,4 +1,4 @@
-package com.example.kakeibo.controller;
+package com.example.kintai.controller;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class AttendanceController {
 	
 	
 	@GetMapping("/")

@@ -1,4 +1,4 @@
-package com.example.kakeibo.model;
+package com.example.kintai.model;
 
 import java.time.LocalDate;
 
@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Income {
+public class Attendance {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

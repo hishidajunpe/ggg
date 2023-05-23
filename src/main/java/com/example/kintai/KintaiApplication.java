@@ -1,13 +1,13 @@
-package com.example.kakeibo;
+package com.example.kintai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KakeiboApplication {
+public class KintaiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KakeiboApplication.class, args);
+		SpringApplication.run(KintaiApplication.class, args);
 	}
 
 }
