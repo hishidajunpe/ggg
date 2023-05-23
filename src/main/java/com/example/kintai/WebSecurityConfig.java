@@ -26,27 +26,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			http.authorizeRequests()
 			//pトップページの制限なし
 			.antMatchers("/").permitAll()
-			.anyRequest().authenticated()
-		.and()
+			.anyRequest().authenticated();
+		//.and()
 			//pトップページ以後はログインページへ遷移するようにする
-			.formLogin()	
-			.loginPage("/loginForm").permitAll()
-		.and()
-			//pログアウトのpostが飛んで来たらトップページへ遷移する
-			.logout()
-			.logoutSuccessUrl("/index")
-		;
-	}
-
-	@Bean
-	public UserDetailsService userDetailsService() {
-		UserDetails user =
-			 User.withDefaultPasswordEncoder()
-				.username("sample1")
-				.password("password")
-				.roles("USER")
-				.build();
-
-		return new InMemoryUserDetailsManager(user);
+			//.formLogin()	
+			//.loginPage("/loginForm").permitAll();
+		
 	}
 }
