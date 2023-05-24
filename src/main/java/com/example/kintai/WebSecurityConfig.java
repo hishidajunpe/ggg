@@ -26,8 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 			http.authorizeRequests()
 			//pトップページの制限なし
 			.antMatchers("/").permitAll()
-			.antMatchers("/register").permitAll()
-			.anyRequest().authenticated();
+			.antMatchers("/register").permitAll();
 		//.and()
 			//pトップページ以後はログインページへ遷移するようにする
 			//.formLogin()	

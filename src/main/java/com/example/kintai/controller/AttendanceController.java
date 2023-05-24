@@ -30,7 +30,7 @@ public class AttendanceController {
 	@GetMapping("/")
     public String getIndex(Model model) {
         LocalDate date = LocalDate.now();
-        model.addAttribute("date", date);	
+        model.addAttribute("date", date);
 		return "index";
     }
 	
@@ -60,10 +60,7 @@ public class AttendanceController {
 	
 	//月選択された保存一覧画面の勤怠テーブルの表示
 	@PostMapping("/save")
-	public String changeSave(@Valid Integer mm, Model model, BindingResult bindingResult) {
-		if (bindingResult.hasErrors()) {
-			return "redirect:/save";
-		}
+	public String changeSave(@Valid Integer mm, Model model) {
 		List<Attendance> attendance = attendanceService.getAttendanceMonth(mm);
 		model.addAttribute("tableAttendance", attendance);
 		return "save";
@@ -71,7 +68,7 @@ public class AttendanceController {
 	
 	//勤怠編集画面に遷移する
 	@GetMapping("/edit/{id}")
-	public String getEdit(@PathVariable("Id") Attendance attendance, Model model) {
+	public String getEdit(@PathVariable("id") Attendance attendance, Model model) {
 		model.addAttribute("Attendance", attendance);
 		return "edit";
 	}

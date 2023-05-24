@@ -8,11 +8,11 @@
 </head>
 <body>
 <div layout:fragment="contents">
-<h3 style="padding:40px">勤怠保存時間</h3>
+<div class="container" style="text-align:center">
+<h3 style="padding:40px">勤怠保存一覧</h3>
 <div class="row mb-3">
 	<div class="col">
-		<h2 th:text="${mm}"></h2>月分
-		<p>確認したい月を選択してください</p>
+		<h2 th:text="${mm}"></h2>
 		<form th:action="@{/save}" class="form-inline" method="post"> 
 			<label class="mr-3"> 月を選択してください
 				<select name="mm"class="form-control">
@@ -29,9 +29,10 @@
 					<option>11</option>
 					<option>12</option>
 				</select>
-			</label><input type="submit" value="申請" class="btn btn-secondary mr-1">
+			</label><input type="submit" value="変更" class="btn btn-secondary mr-1">
 		</form>
 	</div>
+</div>
 </div>
 <div class="row">
 	<div class="col">
@@ -50,10 +51,10 @@
 				<tr th:each="attendance : ${tableAttendance}" th:object="${attendance}" >
 					<td th:text="*{mm}"></td>
 					<td th:text="*{dd}"></td>
-					<td th:text="*{workstarttime}"></td>
-					<td th:text="*{workendtime}"></td>
-					<td th:text="*{breakstarttime}"></td>
-					<td th:text="*{breakendtime}"></td>
+					<td th:text="*{workStartTime}"></td>
+					<td th:text="*{workEndTime}"></td>
+					<td th:text="*{breakStartTime}"></td>
+					<td th:text="*{breakEndTime}"></td>
 					<td><a th:href="@{|/edit/*{id}|}">変更</a></td>
 				</tr>
 			</tbody>

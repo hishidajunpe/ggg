@@ -15,7 +15,7 @@
 	<div class="container mt-3">
 		<div class="border rounded" style="padding:50px;">
 			<h3 style="padding:40px">勤怠編集</h3>
-				<form th:action="@{''}" th:object="${attendance}" method="post">
+				<form th:action="@{/edit}" th:object="${attendance}" method="post">
 					<div class="form-group row">
 						<label for="mm" class="col-2 col-form-label">月</label>
 						<div class="col-5">
@@ -64,7 +64,7 @@
 					<div class="form-group row">
 						<label for="breakEndTime" class="col-2 col-form-label">休憩終了時間</label>
 						<div class="col-2">
-							<input type="text" th:field="*{breakStartTime}" class="form-control">
+							<input type="text" th:field="*{breakEndTime}" class="form-control">
 						</div>
 						<div class="col-5">
 							<span th:if="${#fields.hasErrors('breakEndTime')}" th:errors="*{breakEndTime}" class="form-text text-muted"></span>
