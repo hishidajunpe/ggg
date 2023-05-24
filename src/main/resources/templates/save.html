@@ -10,29 +10,43 @@
 <div layout:fragment="contents">
 <div class="container" style="text-align:center">
 <h3 style="padding:40px">勤怠保存一覧</h3>
+
 <div class="row mb-3">
 	<div class="col">
 		<h2 th:text="${mm}"></h2>
 		<form th:action="@{/save}" class="form-inline" method="post"> 
 			<label class="mr-3"> 月を選択してください
-				<select name="mm"class="form-control">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-					<option>8</option>
-					<option>9</option>
-					<option>10</option>
-					<option>11</option>
-					<option>12</option>
+				<select name="mm"class="form-control" id="month">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
 				</select>
-			</label><input type="submit" value="変更" class="btn btn-secondary mr-1">
+			</label><input type="submit" value="変更" class="btn btn-secondary mr-1" id="checkSubmit">
 		</form>
 	</div>
 </div>
+
+<script>
+function submitClick(){
+	alert('選択した月は ' + monthSelect.value + ' 月です。 ' + monthSelect.value + ' 月分の勤怠保存情報を一覧表示します。');
+}
+
+let monthSelect = document.getElementById('month');
+monthSelect.options[2].selected = true;
+
+let checkSubmit = document.getElementById('checkSubmit');
+checkSubmit.addEventListener('click', submitClick);
+</script>
+
 </div>
 <div class="row">
 	<div class="col">
